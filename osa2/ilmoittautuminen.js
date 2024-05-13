@@ -33,3 +33,16 @@ function lisaaTapahtuma(tapahtuma) {
 tapahtumat.forEach(tapahtuma => {
     lisaaTapahtuma(tapahtuma);
 });
+function initMap() { //Kartan kohdan määrittely
+    var keskukatu3 = {lat: 60.405279518307005, lng: 25.101080912752735}; //koordinaatit kartasta Google maps (huom! pieni L-kirjain kohdassa lng)
+    var kartta = new google.maps.Map(document.getElementById('kartta'), { //kartan luominen
+        zoom: 15,
+        center: keskikatu3
+    });
+    var merkki = new google.maps.Marker({ //merkin luominen karttaan
+        position: keskikatu3,
+        map: kartta,
+        title: 'Keskikatu 3, Kerava'
+
+    });
+}
