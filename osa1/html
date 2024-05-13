@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"> <!-- Linkki CSS-tiedostoon, joka määrittelee sivuston ulkoasun -->
 </head>
 <body>
-    <h1>Tervetuloa Kahvila X:n tapahtumakalenteriin</h1> <!-- Otsikko sivulle -->
+    <h1>Tervetuloa Kahvila Espresson tapahtumakalenteriin</h1> <!-- Otsikko sivulle -->
     <div id="tapahtumakalenteri">
         <!-- Tähän lisätään tapahtumat -->
     </div>
