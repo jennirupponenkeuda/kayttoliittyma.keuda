@@ -1,0 +1,47 @@
+/* Resetoidaan kaikki sivuston elementit */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Asetetaan perusfontti ja taustaväri */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Keskitetään otsikko */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Tapahtumakalenterin tyyli */
+#tapahtumakalenteri {
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Tapahtuma-elementin tyyli */
+.tapahtuma {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Ilmoittaudu-napin tyyli */
+.ilmoittaudu-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
