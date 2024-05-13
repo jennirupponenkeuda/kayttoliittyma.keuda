@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tämä määrittää skaalaavuutta-->
     <title>Kahvilan tapahtumakalenteri</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Linkki CSS-tiedostoon, joka määrittelee sivuston ulkoasun -->
+    <link rel="stylesheet" href="style.css"> <!-- Linkki CSS-tiedostoon, joka määrittelee sivuston ulkoasun -->
 </head>
 <body>
     <h1>Tervetuloa Kahvila X:n tapahtumakalenteriin</h1> <!-- Otsikko sivulle -->

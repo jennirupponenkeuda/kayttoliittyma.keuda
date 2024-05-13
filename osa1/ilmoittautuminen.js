@@ -1,4 +1,4 @@
-// Simuloitu tapahtumadata
+// esimerkit tapahtumista
 const tapahtumat = [
     { nimi: "Live-musiikkia", paikka: "Kahvila X", aika: "2024-05-20 18:00" },
     { nimi: "Kirjailijavieraana", paikka: "Kahvila X", aika: "2024-06-10 16:00" },
