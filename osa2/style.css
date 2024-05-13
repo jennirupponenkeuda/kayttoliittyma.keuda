@@ -45,3 +45,22 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
 }
+#content-container { /*keskitys*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#tapahtumakalenteri-container { /*keskitys*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#kartta {/*keskitys*/
+    width: 100%;
+    height: 400px;
+    margin-top: -10px; 
+}
