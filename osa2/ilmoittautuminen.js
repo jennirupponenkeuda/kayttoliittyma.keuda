@@ -1,8 +1,8 @@
 // esimerkit tapahtumista
 const tapahtumat = [
-    { nimi: "Live-musiikkia", paikka: "Kahvila Espresso", aika: "2024-05-20 18:00" },
-    { nimi: "Kirjailijavieraana", paikka: "Kahvila Espresso", aika: "2024-06-10 16:00" },
-    { nimi: "Maalausnäyttely", paikka: "Kahvila Espresso", aika: "2024-07-05 12:00" }
+    { nimi: "Live-musiikkia", paikka: "Kahvila Espresso", aika: "20.5.2024 klo 18:00" },
+    { nimi: "Kirjailijavieraana", paikka: "Kahvila Espresso", aika: "10.6.2024 klo 16:30" },
+    { nimi: "Maalausnäyttely", paikka: "Kahvila Espresso", aika: "15.6.2024 klo 12:00" }
 ];
 
 const tapahtumakalenteri = document.getElementById('tapahtumakalenteri');
