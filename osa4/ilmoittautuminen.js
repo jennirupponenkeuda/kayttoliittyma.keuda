@@ -48,12 +48,6 @@ function naytaIlmoittautumisLomake(tapahtuma) {
         </form>
     `;
 
-    // Lisää kirjautumiselementit
-    lomakeDiv.innerHTML += `
-        <h3>Kirjaudu sisään:</h3>
-        <input type="text" id="nimi" placeholder="Nimi">
-        <button onclick="kirjaudu()">Kirjaudu</button>
-    `;
 
     document.body.appendChild(lomakeDiv);
 
