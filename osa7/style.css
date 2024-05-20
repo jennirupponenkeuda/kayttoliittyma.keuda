@@ -96,3 +96,28 @@ h1 {
 #juomamenu th {
     background-color: #f2f2f2;
 }
+/* Tyyli hinnaston otsikolle */
+#ruokamenu h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tyyli hinnastotaulukolle */
+#ruokamenu table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* Tyyli taulukon soluille */
+#ruokamenu th, #juomamenu td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Tyyli ensimmäiselle sarakkeelle */
+#ruokamenu th {
+    background-color: #f2f2f2;
+}
