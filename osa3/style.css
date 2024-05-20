@@ -59,8 +59,13 @@ h1 {
     justify-content: center;
     text-align: center;
 }
-#kartta {/*keskitys*/
+h2 { /* Poistetaan ylimääräiset marginaalit ja yritetään korjata väli pois */
+    margin-top: 20px;
+    margin-bottom: 0; /*marginaalinpoistamisyritys*/
+}
+
+#kartta { /* Poistetaan ylimääräinen marginaali */
     width: 100%;
     height: 400px;
-    
+    margin: 0; /* Poistetaan ylimääräinen marginaali */
 }
