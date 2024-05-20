@@ -122,8 +122,8 @@ h1 {
     background-color: #f2f2f2;
 }
 /* Tyyli ensimmäiselle pääotsikolle */
-#pääotsikko {
-    font: 80px;
+#paaotsikko {
+    font: 120px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#333
 }
