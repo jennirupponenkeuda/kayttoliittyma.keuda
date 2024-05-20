@@ -29,6 +29,8 @@ h1 {
     background-color: #fff;
     padding: 10px;
     margin-bottom: 10px;
+    width: 80%; /* Tai mikä tahansa haluttu leveys */
+    margin: 0 auto; /* Auttaa keskittämään ne sivulle */
 }
 
 /* Ilmoittaudu-napin tyyli */
@@ -65,9 +67,11 @@ h1 {
     width: 50%; /* leveyden säätö */
 }
 #kartta {/*keskitys*/
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+
+    justify-content: center; /* Keskittää kartan vaakasuunnassa */
+    align-items: center; /* Keskittää kartan pystysuunnassa */
+    width: 65%; /* Tai mikä tahansa haluttu leveys */
+    margin: 0 auto; /* Auttaa keskittämään sen sivulle */
     
     
 }
@@ -129,6 +133,8 @@ h1 {
 }
 #navigation { /* Navigointipalkin tyylit*/
     background-color: #333;
+    width: 50%; /* Haluttu leveys */
+    margin: 0 auto; /* Auttaa keskittämään navigointipalkin */
 }
 
 #navigation ul {
