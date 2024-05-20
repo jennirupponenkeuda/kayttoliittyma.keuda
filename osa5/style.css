@@ -66,7 +66,8 @@ h1 {
 }
 #kartta {/*keskitys*/
     width: 100%;
-    height: 400px;
+    flex-direction: column;
+    align-items: center;
     
     
 }
