@@ -71,3 +71,28 @@ h1 {
     
     
 }
+/* Tyyli hinnaston otsikolle */
+#juomamenu h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tyyli hinnastotaulukolle */
+#juomamenu table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* Tyyli taulukon soluille */
+#juomamenu th, #juomamenu td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Tyyli ensimmäiselle sarakkeelle */
+#juomamenu th {
+    background-color: #f2f2f2;
+}
