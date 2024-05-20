@@ -110,6 +110,22 @@ function tulostaIlmoittautumiset() {
         console.log('Ei ilmoittautumisia.');
     }
 }
+document.addEventListener("DOMContentLoaded", onkoKirjautunut);
+
+function onkoKirjautunut() {
+    let kirjautunut = localStorage.getItem('kirjautunut'); 
+    if (kirjautunut === 'kylla') {
+        document.getElementById('tervetulo_teksti').textContent += " " + localStorage.getItem("nimi");
+    }
+}
+
+function ilmoittaudu() {
+    const nimi = document.getElementById("nimi").value;
+    // Tallenna kirjautumistila
+    localStorage.setItem("kirjautunut", 'kylla');
+    // Tallenna käyttäjän nimi
+    localStorage.setItem("nimi", nimi);
+}
 
 // Lisää kaikki tapahtumat kalenteriin
 tapahtumat.forEach(tapahtuma => {
