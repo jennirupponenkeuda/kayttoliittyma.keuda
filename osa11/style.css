@@ -1,0 +1,215 @@
+/* Resetoidaan kaikki sivuston elementit */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Asetetaan perusfontti ja taustaväri */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4c2c2;
+}
+
+/* Keskitetään otsikko */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Tapahtumakalenterin tyyli */
+#tapahtumakalenteri {
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Tapahtuma-elementin tyyli */
+.tapahtuma {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%; /* Tai mikä tahansa haluttu leveys */
+    margin: 0 auto; /* Auttaa keskittämään ne sivulle */
+}
+
+/* Ilmoittaudu-napin tyyli */
+.ilmoittaudu-button {
+    background-color: #8b4513;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#content-container { /*keskitys*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#tapahtumakalenteri-container { /*keskitys*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+}
+.ilmoittautumis-lomake {
+    margin: 0 auto; /* Lisätään keskitys */
+    width: 50%; /* leveyden säätö */
+}
+#kartta {/*keskitys*/
+
+    justify-content: center; /* Keskittää kartan vaakasuunnassa */
+    align-items: center; /* Keskittää kartan pystysuunnassa */
+    width: 65%; /* Tai mikä tahansa haluttu leveys */
+    margin: 0 auto; /* Auttaa keskittämään sen sivulle */
+    
+    
+}
+/* Tyyli hinnaston otsikolle */
+#juomamenu h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tyyli hinnastotaulukolle */
+#juomamenu table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* Tyyli taulukon soluille */
+#juomamenu th, #juomamenu td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Tyyli ensimmäiselle sarakkeelle */
+#juomamenu th {
+    background-color: #f2f2f2;
+}
+/* Tyyli hinnaston otsikolle */
+#ruokamenu h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Tyyli hinnastotaulukolle */
+#ruokamenu table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+/* Tyyli taulukon soluille */
+#ruokamenu th, #ruokamenu td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Tyyli ensimmäiselle sarakkeelle */
+#ruokamenu th {
+    background-color: #f2f2f2;
+}
+/* Keskitetään kuva ja asetetaan sen leveys */
+.taustakuva-container {
+    position: relative; /* Tämä tarvitaan, jotta otsikko voidaan sijoittaa suhteessa tähän konttiin */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Keskittää otsikon pystysuunnassa */
+    margin: 0 auto;
+    width: 50%; /* Aseta sama leveys kuin muille elementeille */
+    height: 300px; /* Aseta haluttu korkeus */
+    overflow: hidden; /* Piilottaa kuvan osat, jotka ylittävät kontin */
+}
+
+.taustakuva1 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tyyli ensimmäiselle pääotsikolle */
+
+
+/* Jotta otsikko pysyy kuvan päällä */
+#paaotsikko {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Keskittää otsikon */
+    text-align: center;
+    color: white;
+}
+
+#paaotsikko h1 {
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Taustan väri ja läpinäkyvyys */
+    border-radius: 10px; /* Pyöristetyt kulmat */
+    color: white
+}
+
+
+#navigation { /* Navigointipalkin tyylit*/
+    background-color: #333;
+    width: 50%; /* Haluttu leveys */
+    margin: 0 auto; /* Auttaa keskittämään navigointipalkin */
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul li {
+    display: inline;
+}
+
+#navigation ul li a {
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#navigation ul li a:hover {
+    background-color: #555;
+}
+#tarinamme {
+    max-width: 667px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tarinamme h1 {
+    text-align: center;
+    color: #333;
+}
+
+#tarinamme p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+
