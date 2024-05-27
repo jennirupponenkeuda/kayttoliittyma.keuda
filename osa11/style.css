@@ -16,56 +16,7 @@ h1 {
     text-align: center;
     color: #000;
     margin-top: 40px; /*Lisää tilaa eri osuuksien väleihin*/
-}
 
-/* Tapahtumakalenterin tyyli */
-#tapahtumakalenteri {
-    margin: 20px auto;
-    width: 80%;
-}
-
-/* Tapahtuma-elementin tyyli */
-.tapahtuma {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 80%; /* Tai mikä tahansa haluttu leveys */
-    margin: 0 auto; /* Auttaa keskittämään ne sivulle */
-}
-
-/* Ilmoittaudu-napin tyyli */
-.ilmoittaudu-button {
-    background-color: #8b4513;
-    border: none;
-    color: #ffff;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-#content-container { /*keskitys*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-#tapahtumakalenteri-container { /*keskitys*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px auto;
-    width: 80%;
-}
-.ilmoittautumis-lomake {
-    margin: 0 auto; /* Lisätään keskitys */
-    width: 50%; /* leveyden säätö */
 }
 #kartta {/*keskitys*/
 
@@ -214,5 +165,54 @@ h1 {
     margin-bottom: 10px;
     color: #000;
 }
+/* Tapahtumakalenterin tyyli */
+#tapahtumakalenteri {
+    margin: 20px auto;
+    width: 80%;
+}
 
+/* Tapahtuma-elementin tyyli */
+.tapahtuma {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%; /* Tai mikä tahansa haluttu leveys */
+    margin: 0 auto; /* Auttaa keskittämään ne sivulle */
+}
 
+/* Ilmoittaudu-napin tyyli */
+.ilmoittaudu-button {
+    background-color: #8b4513;
+    border: none;
+    color: #ffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#content-container { /*keskitys*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#tapahtumakalenteri-container { /*keskitys*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+}
+.ilmoittautumis-lomake {
+    position: relative;
+    margin: 0 auto; /* Lisätään keskitys */
+    width: 50%; /* leveyden säätö */
+
+}
