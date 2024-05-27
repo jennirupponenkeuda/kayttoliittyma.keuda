@@ -1,4 +1,3 @@
-// esimerkit tapahtumista
 const tapahtumat = [
     { nimi: "Live-musiikkia", paikka: "Kahvila Espresso", aika: "20.5.2024 klo 18:00" },
     { nimi: "Kirjailijavieraana Elli Esimerkki", paikka: "Kahvila Espresso", aika: "10.6.2024 klo 16:30" },
@@ -25,13 +24,19 @@ function lisaaTapahtuma(tapahtuma) {
 
     // Lisää tapahtumakohtainen toiminnallisuus
     ilmoittauduButton.addEventListener('click', () => {
-        // Lisää ilmoittautumislomake
-        naytaIlmoittautumisLomake(tapahtuma);
+        // Lisää ilmoittautumislomake tapahtuman alle
+        naytaIlmoittautumisLomake(tapahtuma, tapahtumaDiv);
     });
 }
 
 // Funktio, joka näyttää ilmoittautumislomakkeen
-function naytaIlmoittautumisLomake(tapahtuma) {
+function naytaIlmoittautumisLomake(tapahtuma, parentDiv) {
+    // Poista olemassa oleva lomake, jos sellainen on
+    const existingForm = parentDiv.querySelector('.ilmoittautumis-lomake');
+    if (existingForm) {
+        existingForm.remove();
+    }
+
     const lomakeDiv = document.createElement('div');
     lomakeDiv.classList.add('ilmoittautumis-lomake');
 
@@ -48,10 +53,9 @@ function naytaIlmoittautumisLomake(tapahtuma) {
         </form>
     `;
 
+    parentDiv.appendChild(lomakeDiv);
 
-    document.body.appendChild(lomakeDiv);
-
-    const ilmoittautumisForm = document.getElementById('ilmoittautumisForm');
+    const ilmoittautumisForm = lomakeDiv.querySelector('#ilmoittautumisForm');
     ilmoittautumisForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const etunimi = document.getElementById('etunimi').value;
@@ -60,7 +64,7 @@ function naytaIlmoittautumisLomake(tapahtuma) {
 
         // Tallenna ilmoittautumistiedot Local Storageen
         tallennaIlmoittautuminen({ etunimi, sukunimi, email, tapahtuma: tapahtuma.nimi });
-        
+
         // Näytä Peruuta ilmoittautuminen -nappi
         naytaPeruutaIlmoittautuminenNappi(tapahtuma, lomakeDiv);
     });
@@ -108,6 +112,7 @@ function poistaIlmoittautuminen(tapahtumaNimi) {
 tapahtumat.forEach(tapahtuma => {
     lisaaTapahtuma(tapahtuma);
 });
+
 function initMap() {
     const keskikatu3 = { lat: 60.405279518307005, lng: 25.101080912752735 }; // koordinaatit kartasta Google maps (huom! pieni L-kirjain kohdassa lng)
     const kartta = new google.maps.Map(document.getElementById('kartta'), { // kartan luominen

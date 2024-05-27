@@ -64,6 +64,7 @@ h1 {
     width: 80%;
 }
 .ilmoittautumis-lomake {
+    position: relative;
     margin: 0 auto; /* Lisätään keskitys */
     width: 50%; /* leveyden säätö */
 }

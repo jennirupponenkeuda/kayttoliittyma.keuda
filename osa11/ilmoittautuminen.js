@@ -1,3 +1,11 @@
+const tapahtumat = [
+    { nimi: "Live-musiikkia", paikka: "Kahvila Espresso", aika: "20.5.2024 klo 18:00" },
+    { nimi: "Kirjailijavieraana Elli Esimerkki", paikka: "Kahvila Espresso", aika: "10.6.2024 klo 16:30" },
+    { nimi: "Maalausnäyttely: Kesän taikaa", paikka: "Kahvila Espresso", aika: "15.6.2024 klo 12:00" }
+];
+
+const tapahtumakalenteri = document.getElementById('tapahtumakalenteri');
+
 // Funktio, joka luo tapahtuma-elementin ja lisää sen sivulle
 function lisaaTapahtuma(tapahtuma) {
     const tapahtumaDiv = document.createElement('div');
@@ -18,22 +26,6 @@ function lisaaTapahtuma(tapahtuma) {
     ilmoittauduButton.addEventListener('click', () => {
         // Lisää ilmoittautumislomake tapahtuman alle
         naytaIlmoittautumisLomake(tapahtuma, tapahtumaDiv);
-    });
-}
-
-// Funktio, joka luo ilmoittautumisen peruuttamisnapin
-function naytaPeruutaIlmoittautuminenNappi(tapahtuma, lomakeDiv) {
-    lomakeDiv.innerHTML = `
-        <p>Olet ilmoittautunut tapahtumaan: ${tapahtuma.nimi}</p>
-        <button class="peruuta-button">Peruuta ilmoittautuminen</button>
-    `;
-
-    const peruutaButton = lomakeDiv.querySelector('.peruuta-button');
-    peruutaButton.addEventListener('click', () => {
-        lomakeDiv.remove();
-        alert(`Ilmoittautuminen peruttu tapahtumaan: ${tapahtuma.nimi}`);
-        // Poista ilmoittautumistiedot Local Storagesta
-        poistaIlmoittautuminen(tapahtuma.nimi);
     });
 }
 
@@ -61,8 +53,7 @@ function naytaIlmoittautumisLomake(tapahtuma, parentDiv) {
         </form>
     `;
 
-    // Lisää lomake suoraan tapahtumaDiv elementin jälkeen
-    parentDiv.parentNode.insertBefore(lomakeDiv, parentDiv.nextSibling);
+    parentDiv.appendChild(lomakeDiv);
 
     const ilmoittautumisForm = lomakeDiv.querySelector('#ilmoittautumisForm');
     ilmoittautumisForm.addEventListener('submit', (event) => {
@@ -79,8 +70,58 @@ function naytaIlmoittautumisLomake(tapahtuma, parentDiv) {
     });
 }
 
+// Funktio, joka luo ilmoittautumisen peruuttamisnapin
+function naytaPeruutaIlmoittautuminenNappi(tapahtuma, lomakeDiv) {
+    lomakeDiv.innerHTML = `
+        <p>Olet ilmoittautunut tapahtumaan: ${tapahtuma.nimi}</p>
+        <button class="peruuta-button">Peruuta ilmoittautuminen</button>
+    `;
+
+    const peruutaButton = lomakeDiv.querySelector('.peruuta-button');
+    peruutaButton.addEventListener('click', () => {
+        lomakeDiv.remove();
+        alert(`Ilmoittautuminen peruttu tapahtumaan: ${tapahtuma.nimi}`);
+        // Poista ilmoittautumistiedot Local Storagesta
+        poistaIlmoittautuminen(tapahtuma.nimi);
+    });
+}
+
+// Funktio, joka tallentaa ilmoittautumistiedot Local Storageen
+function tallennaIlmoittautuminen(ilmoittautuja) {
+    let ilmoittautumiset = localStorage.getItem('ilmoittautumiset');
+    if (ilmoittautumiset) {
+        ilmoittautumiset = JSON.parse(ilmoittautumiset);
+    } else {
+        ilmoittautumiset = [];
+    }
+    ilmoittautumiset.push(ilmoittautuja);
+    localStorage.setItem('ilmoittautumiset', JSON.stringify(ilmoittautumiset));
+}
+
+// Funktio, joka poistaa ilmoittautumistiedot Local Storagesta
+function poistaIlmoittautuminen(tapahtumaNimi) {
+    let ilmoittautumiset = localStorage.getItem('ilmoittautumiset');
+    if (ilmoittautumiset) {
+        ilmoittautumiset = JSON.parse(ilmoittautumiset);
+        ilmoittautumiset = ilmoittautumiset.filter(ilmoittautuja => ilmoittautuja.tapahtuma !== tapahtumaNimi);
+        localStorage.setItem('ilmoittautumiset', JSON.stringify(ilmoittautumiset));
+    }
+}
+
 // Lisää kaikki tapahtumat kalenteriin
 tapahtumat.forEach(tapahtuma => {
     lisaaTapahtuma(tapahtuma);
 });
 
+function initMap() {
+    const keskikatu3 = { lat: 60.405279518307005, lng: 25.101080912752735 }; // koordinaatit kartasta Google maps (huom! pieni L-kirjain kohdassa lng)
+    const kartta = new google.maps.Map(document.getElementById('kartta'), { // kartan luominen
+        zoom: 15,
+        center: keskikatu3
+    });
+    const merkki = new google.maps.Marker({ // merkin luominen karttaan
+        position: keskikatu3,
+        map: kartta,
+        title: 'Keskikatu 3, Kerava'
+    });
+}
